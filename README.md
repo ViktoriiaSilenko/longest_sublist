@@ -1,0 +1,1 @@
+Given a list of pairs of numbers e.g. [(1,4), (2,5), (7, 3),(4,6),(7,7)] find the longest sub-list that has the pairs sorted by the first entry in ascending order by the second in descending order, [(2,5), (7, 3)]
