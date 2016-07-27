@@ -19,12 +19,12 @@ public class ListUtil {
 		int indexFrom = -1; // first index in sublist
 
 		for (int i = 1; i < list.size(); i++) {
-			int sortByFirstNumber = new BigDecimal(list.get(i - 1).getFirstNumber().toString())
+			int sortByFirstNumberSignum = new BigDecimal(list.get(i - 1).getFirstNumber().toString())
 					.compareTo(new BigDecimal(list.get(i).getFirstNumber().toString()));
-			int sortBySecondNumber = new BigDecimal(list.get(i - 1).getSecondNumber().toString())
+			int sortBySecondNumberSignum = new BigDecimal(list.get(i - 1).getSecondNumber().toString())
 					.compareTo(new BigDecimal(list.get(i).getSecondNumber().toString()));
-			if ((sortByFirstNumber == -1 || sortByFirstNumber == 0)
-					&& (sortBySecondNumber == 1 || sortBySecondNumber == 0)) {
+			if ((sortByFirstNumberSignum == -1 || sortByFirstNumberSignum == 0)
+					&& (sortBySecondNumberSignum == 1 || sortBySecondNumberSignum == 0)) {
 				tempCount++;
 				if (indexFromTemp == -1) { // to find first index in current sublist (candidate)
 					indexFromTemp = i - 1;
