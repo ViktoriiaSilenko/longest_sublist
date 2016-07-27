@@ -36,8 +36,9 @@ public class ListUtilTest {
 		list.add(new Pair<Double>(new Double(-3.234), new Double(-5.1)));
 		list.add(new Pair<Double>(new Double(-2.4), new Double(-6.1)));
 		list.add(new Pair<Double>(new Double(1.4), new Double(-8.2)));
+		list.add(new Pair<Double>(new Double(1.4), new Double(-8.2)));
 		list.add(new Pair<Double>(new Double(3.44), new Double(0.3)));
 
-		assertEquals(list.subList(1, 4), ListUtil.findLongestSubList(list));
+		assertEquals(list.subList(1, 5), ListUtil.findLongestSubList(list));
 	}
 }
