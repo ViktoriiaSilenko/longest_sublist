@@ -14,15 +14,18 @@ public class ListUtilTest {
 		list.add(new Pair<Integer>(new Integer(1), new Integer(4)));
 		list.add(new Pair<Integer>(new Integer(2), new Integer(5)));
 		list.add(new Pair<Integer>(new Integer(7), new Integer(3)));
-		list.add(new Pair<Integer>(new Integer(4), new Integer(6)));
+		list.add(new Pair<Integer>(new Integer(4), new Integer(9)));
 		list.add(new Pair<Integer>(new Integer(7), new Integer(7)));
+		list.add(new Pair<Integer>(new Integer(8), new Integer(6)));
+		list.add(new Pair<Integer>(new Integer(9), new Integer(4)));
+		list.add(new Pair<Integer>(new Integer(3), new Integer(4)));
 
-		assertEquals(list.subList(1, 3), ListUtil.findLongestSubList(list));
+		assertEquals(list.subList(3, 7), ListUtil.findLongestSubList(list));
 	}
 	
 	@Test
 	public void testFindLongestSubListForNullList() {
-		assertEquals(new ArrayList<Pair>(), ListUtil.findLongestSubList(null));
+		assertEquals(null, ListUtil.findLongestSubList(null));
 	}
 	
 	@Test

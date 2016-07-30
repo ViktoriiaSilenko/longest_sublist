@@ -7,13 +7,16 @@ import java.util.List;
 public class ListUtil {
 
 	/**
-	 * @param list is a list of pairs of numbers, 
-	 * e.g. [(1,4), (2,5), (7, 3), (4, 6), (7, 7)
-	 * @return the longest sublist that has the pairs sorted by the first entry in ascending order by the second in descending order, 
-	 * e.g. [(2,5), (7, 3)]
+	 * @param list is a list of pairs of numbers, e.g. [(1, 4), (2, 5), (7, 3), (4, 6), (7, 7)]
+	 * @return the longest sublist that has the pairs sorted by the first entry
+	 * in ascending order by the second in descending order, e.g. [(2,5), (7, 3)]
 	 */
 	public static List<Pair> findLongestSubList(List<Pair> list) {
-		if (list == null || list.isEmpty()) {
+		if (list == null) {
+			return null;
+		}
+		
+		if (list.isEmpty()) {
 			return new ArrayList<Pair>();
 		}
 
