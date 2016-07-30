@@ -38,7 +38,7 @@ public class ListUtilTest {
 		List<Pair> list = new ArrayList<>();
 		list.add(new Pair<Integer>(new Integer(1), new Integer(4)));
 
-		assertEquals(list.subList(0, 1), ListUtil.findLongestSubList(list));
+		assertEquals(list, ListUtil.findLongestSubList(list));
 	}
 
 	@Test
@@ -48,7 +48,7 @@ public class ListUtilTest {
 		list.add(new Pair<Integer>(new Integer(2), new Integer(5)));
 		list.add(new Pair<Integer>(new Integer(7), new Integer(8)));
 
-		assertEquals(list.subList(0, 1), ListUtil.findLongestSubList(list));
+		assertEquals(new ArrayList<Pair>(), ListUtil.findLongestSubList(list));
 	}
 
 	@Test
