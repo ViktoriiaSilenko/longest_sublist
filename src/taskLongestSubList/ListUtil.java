@@ -2,6 +2,7 @@ package taskLongestSubList;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class ListUtil {
@@ -17,7 +18,7 @@ public class ListUtil {
 		}
 		
 		if (list.isEmpty()) {
-			return new ArrayList<Pair>();
+			return list;
 		}
 		
 		if (list.size() == 1) {
@@ -61,7 +62,7 @@ public class ListUtil {
 		}
 
 		if (indexFrom == -1) {
-			return new ArrayList<Pair>(); // if no such sublist, we return empty list
+			return Collections.emptyList(); // if no such sublist, we return empty list
 		}
 
 		return list.subList(indexFrom, indexFrom + count);	
