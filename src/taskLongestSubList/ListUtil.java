@@ -1,8 +1,6 @@
 package taskLongestSubList;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class ListUtil {
@@ -17,11 +15,7 @@ public class ListUtil {
 			return null;
 		}
 		
-		if (list.isEmpty()) {
-			return list;
-		}
-		
-		if (list.size() == 1) {
+		if (list.isEmpty() || (list.size() == 1)) {
 			return list;
 		}
 		
@@ -62,10 +56,10 @@ public class ListUtil {
 		}
 
 		if (indexFrom == -1) {
-			return Collections.emptyList(); // if no such sublist, we return empty list
+			return list.subList(0, 1); // if no such sublist length >=2, we return first element
 		}
 
-		return list.subList(indexFrom, indexFrom + count);	
+		return list.subList(indexFrom, indexFrom + count); 	 
 	}
 
 }

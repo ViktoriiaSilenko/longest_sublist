@@ -52,7 +52,7 @@ public class ListUtilTest {
 				pairOf(7, 8)
 		};
 		List<Pair> list = Arrays.asList(model);
-		assertEquals(Collections.emptyList(), ListUtil.findLongestSubList(list));
+		assertEquals(list.subList(0, 1), ListUtil.findLongestSubList(list));
 	}
 
 	@Test
